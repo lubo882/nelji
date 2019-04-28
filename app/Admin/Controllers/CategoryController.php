@@ -140,6 +140,11 @@ class CategoryController extends Controller
         $form = new Form(new Category);
         $form->select('category_id','文章分类')->options(Category::selectOptions());
         $form->text('title', 'Title');
+        $status = [
+            'on'=>['1','是'],
+            'off'=>['1','否'],
+        ];
+        $form->switch('is_menu','显示导航')->states($status);
 
 
         return $form;

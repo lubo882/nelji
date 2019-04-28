@@ -15,6 +15,7 @@ Route::group([
     $router->resource('website/categories', CategoryController::class);
     $router->resource('website/slide_images', SlideImageController::class);
     $router->resource('website/setting', WebsiteSetController::class);
+    $router->resource('demo', DemoController::class);
 
 });
 
